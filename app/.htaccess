@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP:Upgrade} =websocket [NC]
+RewriteRule /(.*) ws://127.0.0.1:8000/$1 [P,L]
+RewriteCond %{HTTP:Upgrade} !=websocket [NC]
+RewriteRule /(.*) http://127.0.0.1:8000/$1 [P,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ app/main.py [QSA,L]
