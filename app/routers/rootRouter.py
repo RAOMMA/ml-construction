@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 import os
-from app.helpers.preprocess import process
+from helpers.preprocess import process
 
 
 router = APIRouter()
