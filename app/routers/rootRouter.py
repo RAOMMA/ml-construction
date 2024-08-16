@@ -16,5 +16,7 @@ async def preprocess_data(data: dict):
     print(data1)
     print(date)
     price = process(data1 , date)
+    if price < 0:
+        price = 0
     return price
 
