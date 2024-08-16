@@ -1,4 +1,4 @@
-uvicorn==0.21.1
+uvicorn
 pandas==2.0.1
 numpy==1.24.3
-fastapi==0.95.0
+fastapi
